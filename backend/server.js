@@ -4,11 +4,11 @@ require('dotenv').config();
 // require express
 const express = require('express');
 const mongoose = require('mongoose');
+
 const repositoryRoutes = require('./routes/repositories');
 
 // express app
 const app = express();
-
 app.use(express.json());
 
 // middleware
@@ -25,9 +25,8 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     // listen for requests
     app.listen(process.env.PORT, () => {
-        console.log(`Connect to db and listening on port ${process.env.PORT}`);
-});
-
+        console.log('Connect to db and listening on port', process.env.PORT);
+    });
 })
 .catch((error) => {
     console.log(error);
