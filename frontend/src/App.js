@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Nav from './components/Nav';
+import Main from './components/Main';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
               element={<Home />}
             />
           </Routes>
+          <Main />
         </div>
       </BrowserRouter>
     </div>
