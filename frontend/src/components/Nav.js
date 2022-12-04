@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = (props) => {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
@@ -11,13 +11,19 @@ const Nav = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link nav-home" aria-current="page">Sign up</Link>
+                            <Link to="/" className="nav-link nav-home" aria-current="page">{props.signup}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">Sign in</Link>
+                            <Link to="/" className="nav-link">{props.signin}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">About</Link>
+                            <Link to="/" className="nav-link">{props.about}</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/" className="nav-link">{props.overview}</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/" className="nav-link">{props.repositories}</Link>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
