@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
+
+// components
 import Nav from "../components/Nav";
+import RepositoryDetails from '../components/RepositoryDetails';
 
 const Profile = () => {
     const [repositories, setRepositories] = useState(null);
@@ -23,7 +26,10 @@ const Profile = () => {
             <Nav />
             <div>
                 {repositories && repositories.map((repository) => (
-                    <img className="avatar" key={repository._id} src={repository.avatar} alt=""/>
+                    <RepositoryDetails 
+                        key={repository._id} 
+                        repository={repository}
+                    />
                 ))}
             </div>
         </div>
