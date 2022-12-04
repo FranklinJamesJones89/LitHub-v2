@@ -7,10 +7,11 @@ const Profile = () => {
     useEffect(() => {
         const fetchRepositories = async () => {
             const response = await fetch('/api/repositories')
-            const json = await response.json();
+            const json = await response.json()
 
             if (response.ok) {
                 setRepositories(json);
+                console.log(json);
             }
         }
 
@@ -20,7 +21,7 @@ const Profile = () => {
     return (
         <div>
             <Nav />
-            <div className='repositories'>
+            <div>
                 {repositories && repositories.map((repository) => (
                     <p key={repository._id}>{repository.title}</p>
                 ))}
