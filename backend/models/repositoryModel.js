@@ -7,14 +7,6 @@ const repositorySchema = new Schema({
         type: String,
         required: true
     },
-    fName: {
-        type: String,
-        required: true
-    },
-    lName: {
-        type: String,
-        required: true
-    },
     title: {
         type: String,
         required: true
