@@ -54,3 +54,9 @@ body {
 .repositories {
   background-color: rgb(29, 15, 43);
 }
+
+.avatar {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
