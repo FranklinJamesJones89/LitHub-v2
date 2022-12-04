@@ -51,12 +51,13 @@ body {
 }
 
 /* Repositories */
-.repositories {
-  background-color: rgb(29, 15, 43);
-}
-
 .avatar {
   width: 18vw;
   height: 18vw;
   border-radius: 50%;
+  margin-left: 35%;
+}
+
+.repo-container {
+  margin-right: 25%;
 }
