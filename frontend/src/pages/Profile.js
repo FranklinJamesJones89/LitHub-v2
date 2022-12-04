@@ -23,7 +23,10 @@ const Profile = () => {
 
     return (
         <div>
-            <Nav />
+            <Nav 
+                overview="Overview"
+                repositories="Repositories" 
+            />
             <div>
                 {repositories && repositories.map((repository) => (
                     <RepositoryDetails 
