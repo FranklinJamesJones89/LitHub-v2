@@ -23,7 +23,7 @@ const Profile = () => {
             <Nav />
             <div>
                 {repositories && repositories.map((repository) => (
-                    <p key={repository._id}>{repository.title}</p>
+                    <img className="avatar" key={repository._id} src={repository.avatar} alt=""/>
                 ))}
             </div>
         </div>
