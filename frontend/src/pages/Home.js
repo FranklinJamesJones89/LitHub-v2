@@ -4,7 +4,11 @@ import Main from "../components/Main";
 const Home = () => {
     return (
         <div className="home">
-            <Nav />
+            <Nav 
+                signup ="Sign up"
+                signin="Sign in"
+                about="About"
+            />
             <Main />
         </div>
     )
