@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const repositorySchema = new Schema({
+    avatar: {
+        type: String,
+        required: true
+    },
     fName: {
         type: String,
         required: true
