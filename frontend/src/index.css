@@ -61,3 +61,13 @@ body {
 .repo-container {
   margin-right: 25%;
 }
+
+.repo-title {
+  color: rgb(252, 174, 30);
+}
+
+.genre-circle {
+  background-color: green;
+  color: green;
+  width: 10px;
+}
