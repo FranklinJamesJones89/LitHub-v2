@@ -11,7 +11,10 @@ const Nav = (props) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link nav-home" aria-current="page">{props.signup}</Link>
+                            <Link to="/profile" className="nav-link nav-home" aria-current="page">{props.profile}</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/signup" className="nav-link nav-home" aria-current="page">{props.signup}</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/" className="nav-link">{props.signin}</Link>
@@ -20,10 +23,10 @@ const Nav = (props) => {
                             <Link to="/" className="nav-link">{props.about}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">{props.overview}</Link>
+                            <Link to="/profile" className="nav-link">{props.overview}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">{props.repositories}</Link>
+                            <Link to="/repositories" className="nav-link">{props.repositories}</Link>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
