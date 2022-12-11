@@ -28,6 +28,9 @@ const Nav = (props) => {
                         <li className="nav-item">
                             <Link to="/repositories" className="nav-link">{props.repositories}</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/create" className="nav-link">{props.create}</Link>
+                        </li>
                     </ul>
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

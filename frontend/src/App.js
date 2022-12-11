@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import AllRepositories from './pages/AllRepositories';
+import Create from './pages/Create';
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
             <Route
               path="/repositories"
               element={<AllRepositories />}
+            />
+            <Route
+              path="/create"
+              element={<Create />}
             />
           </Routes>
         </div>

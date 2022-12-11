@@ -27,11 +27,11 @@ const getRepository = async (req, res) => {
 
 // create a new repository
 const createRepository = async (req, res) => {
-    const {avatar, title, synopsis, genre, form} = req.body;
+    const {title, synopsis, genre, form} = req.body;
 
     // add doc to db
     try {
-        const repository = await Repository.create({avatar,title, synopsis, genre, form});
+        const repository = await Repository.create({title, synopsis, genre, form});
         res.status(200).json(repository);
     } catch (error) {
         res.status(400).json({error: error.message})
