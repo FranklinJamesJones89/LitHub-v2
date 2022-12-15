@@ -1,7 +1,7 @@
 function SignupForm(props) {
     return (
         <div className="signup-container">
-          <form className="form">
+          <form className="signup-form">
             <input type="text" placeholder="Username"/>
             <input type="password" placeholder="Password"/>
             <input type="password" placeholder="Confirm Password"/>
