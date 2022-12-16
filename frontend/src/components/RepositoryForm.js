@@ -2,12 +2,14 @@ import { useState } from 'react';
 import Nav from './Nav'
 
 const RepositoryForm = (props) => {
+	// useState hooks destructuring
 	const [title, setTitle] = useState('');
 	const [synopsis, setSynopsis] = useState('');
 	const [genre, setGenre] = useState('');
 	const [form, setForm] = useState('');
 	const [error, setError] = useState(null);
 	
+	// Handle submit function
 	const handleSubmit = async(e) => {
 		e.preventDefault()
 
@@ -20,6 +22,7 @@ const RepositoryForm = (props) => {
 				'Content-Type': 'application/json'
 			}
 		})
+		
 		const json = await response.json()
 
 		if (!response.ok) {
@@ -81,6 +84,7 @@ const RepositoryForm = (props) => {
 					value={form}
 				/>
 				<button className='repo-create-button'>create</button>
+				{error && <div className='error'>{error}</div>}
 			</form>	
 		</>
 	)
