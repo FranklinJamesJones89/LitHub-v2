@@ -5,7 +5,7 @@ const Main = () => {
         <div className="container-fluid main">
             <div className="row">
                 <div className="main-txt col-lg-6">
-                    <h1>Where Stories are Told</h1>
+                    <h1 className="main-header">Where Stories are Told</h1>
                     <p>The platform for writers to share their work with the world</p>
                     <div className="input-group input-group-sm">
                         <Link

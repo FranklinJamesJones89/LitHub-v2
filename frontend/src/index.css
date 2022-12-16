@@ -16,7 +16,7 @@ body {
 
 .navbar-brand {
   color: white;
-  font-size: 2.25vw;
+  font-size: 1.5em;
 }
 
 .nav-home {
@@ -29,7 +29,7 @@ body {
 
 .parchment-img {
   padding: 5px;
-  width:4vw;
+  width:2em;
 }
 
 /* Main */
@@ -37,13 +37,12 @@ body {
   margin-top: 15%;
 }
 
-.main h1{
-  font-size: 4vw;
-  font-weight: 700;
+.main p {
+  font-size: 1.5em;
 }
 
-.main p {
-  font-size: 2vw;
+.main-header {
+  font-size: 3em;
 }
 
 .main-signup {
@@ -120,13 +119,14 @@ form {
 .pinned {
   margin-left: 10%;
   margin-bottom: -2%;
-  font-size: 2vw;
+  margin-top: 10%;
+  font-size: 1.25em;
 }
 
 /* Repository Form */
 .create-header {
   margin-top: 2%;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 
 .create-header h1 {
@@ -139,12 +139,13 @@ form {
 }
 
 .repository-form-container {
-  margin-left: 25%;
+  margin-left: 20%;
+  font-size: 1em;
 }
 
 .repo-sub {
   color: grey;
-  font-size: 1vw;
+  font-size: 1em;
 }
 
 .repo-name-input {
@@ -163,7 +164,8 @@ form {
 .repo-name-input-title {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
-  width: 20vw;;
+  width: 15em;
+  height: 1em;
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
   padding: 3px 15px;
@@ -176,7 +178,7 @@ form {
 .repo-name-input-synopsis {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
-  width: 30vw;
+  width: 15em;
   height: 15vw;
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
@@ -190,7 +192,8 @@ form {
 .repo-name-input-genre {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
-  width: 20vw;
+  width: 15em;
+  height: 1em;
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
   padding: 3px 15px;
@@ -203,7 +206,8 @@ form {
 .repo-name-input-form {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
-  width: 20vw;
+  width: 15em;
+  height: 1em;
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
   padding: 3px 15px;
@@ -211,4 +215,24 @@ form {
   font-size: 18px;
   color: white;
   font-weight: 300;
+}
+
+.repo-create-button {
+  margin-top: 2em;
+  border: none;
+  border-radius: 12px;
+  background-color: purple;
+  color: white;
+}
+
+.repo-create-button:hover {
+  background-color: orange;
+}
+
+.repository-form-container label {
+ font-size: 1.25em;
+}
+
+.create-header h1 {
+  font-size: 1.25em;
 }
