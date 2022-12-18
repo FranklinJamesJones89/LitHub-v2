@@ -78,7 +78,7 @@ body {
 
 /* Form */
 .signup-container {
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 80px 0;
   text-align: center;
 }
@@ -256,7 +256,6 @@ form {
 }
 
 .material-symbols-rounded {
-  background-color: grey;
   border-radius: 15px;
   border: none;
 }
