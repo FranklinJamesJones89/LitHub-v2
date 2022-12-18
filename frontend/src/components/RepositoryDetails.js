@@ -1,5 +1,8 @@
 import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
 
+// Date fns
+import { formatDistanceToNow } from 'date-fns'
+
 const RepositoryDetails = ({ repository }) => {
 	const { dispatch } = useRepositoriesContext()
 	
@@ -42,8 +45,8 @@ const RepositoryDetails = ({ repository }) => {
 					<div>
 						<p>🟠 {repository.genre}</p>
 						<p>🟣 {repository.form}</p>
-						<p>{repository.createdAt}</p>
-						<button className='delete-repo' onClick={handleClick}>delete</button>
+						<p>{formatDistanceToNow(new Date(repository.createdAt), { addSuffix: true })}</p>
+						<button className='material-symbols-rounded' onClick={handleClick}>delete</button>
 					</div>
 				</div>
 			</div>

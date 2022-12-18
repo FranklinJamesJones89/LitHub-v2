@@ -18,7 +18,7 @@ const Profile = () => {
 					}
 			}
 			fetchRepositories()
-	}, [])
+	}, [dispatch])
 
 	return (
 			<div>

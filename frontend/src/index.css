@@ -1,3 +1,7 @@
+:root {
+  --error: red;
+}
+
 body {
   color: white;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -161,7 +165,7 @@ form {
   font-weight: 300;
 }
 
-.repo-name-input-title {
+#repo-name-input-title {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
   width: 15em;
@@ -175,7 +179,7 @@ form {
   font-weight: 300;
 }
 
-.repo-name-input-synopsis {
+#repo-name-input-synopsis {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
   width: 15em;
@@ -189,7 +193,7 @@ form {
   font-weight: 300;
 }
 
-.repo-name-input-genre {
+#repo-name-input-genre {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
   width: 15em;
@@ -203,7 +207,7 @@ form {
   font-weight: 300;
 }
 
-.repo-name-input-form {
+#repo-name-input-form {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
   width: 15em;
@@ -239,6 +243,24 @@ form {
   background-color: orange;
 }
 
+.delete-repo:hover {
+  background-color: purple;
+}
+
 .create-header h1 {
   font-size: 1.25em;
+}
+
+.input.error {
+  border: 1px solid var(--error);
+}
+
+.material-symbols-rounded {
+  background-color: grey;
+  border-radius: 15px;
+  border: none;
+}
+
+.material-symbols-rounded:hover {
+  background-color: orange;
 }

@@ -29,6 +29,24 @@ const getRepository = async (req, res) => {
 const createRepository = async (req, res) => {
     const {title, synopsis, genre, form} = req.body;
 
+		let emptyFields = [];
+
+		if (!title) {
+			emptyFields.push('title')
+		}
+		if (!synopsis) {
+			emptyFields.push('synopsis')
+		}
+		if (!genre) {
+			emptyFields.push('genre')
+		}
+		if (!form) {
+			emptyFields.push('form')
+		}
+	if (emptyFields.length > 0) {
+		return res.status(400).json({ error: 'Please fill in all fields' , emptyFields})
+	}
+
     // add doc to db
     try {
         const repository = await Repository.create({title, synopsis, genre, form});

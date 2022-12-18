@@ -10,6 +10,7 @@ const RepositoryForm = (props) => {
 	const [genre, setGenre] = useState('');
 	const [form, setForm] = useState('');
 	const [error, setError] = useState(null);
+	const [emptyFields, setEmptyFields] = useState([]);
 	
 	// Handle submit function
 	const handleSubmit = async(e) => {
@@ -29,6 +30,7 @@ const RepositoryForm = (props) => {
 
 		if (!response.ok) {
 			setError(json.error)
+			setEmptyFields(json.emptyFields)
 		}
 
 		if (response.ok) {
@@ -37,6 +39,7 @@ const RepositoryForm = (props) => {
 			setGenre('')
 			setForm('')
 			setError(null)
+			setEmptyFields([])
 			console.log('New repository added')
 			dispatch({type: 'CREATE_REPOSITORY', payload: json})
 		}
@@ -57,34 +60,38 @@ const RepositoryForm = (props) => {
 				<label>Repository name *</label>
 				<p className='repo-sub'>Great titles are short and memorable</p>
 				<input 
-					className='repo-name-input-title' 
+					id='repo-name-input-title'
 					type='text'onChange={(e) => setTitle(e.target.value)}
 					value={title}
+					className={emptyFields.includes('title') ? 'error' : ''}
 				/>
 				
 				<label>Synopsis</label>
 				<p className='repo-sub'>Write a brief synopsis here</p>
 				<input 
-					className='repo-name-input-synopsis' 
+					id='repo-name-input-synopsis' 
 					type='text'
 					onChange={(e) => setSynopsis(e.target.value)}
 					value={synopsis}
+					className={emptyFields.includes('synopsis') ? 'error' : ''}
 				/>	
 				<label>Genre</label>
 				<p className='repo-sub'>Name of genre</p>
 				<input 
-					className='repo-name-input-genre' 
+					id='repo-name-input-genre' 
 					type='text'
 					onChange={(e) => setGenre(e.target.value)}
 					value={genre}
+					className={emptyFields.includes('genre') ? 'error' : ''}
 				/>
 				<label>Form</label>
 				<p className='repo-sub'>Name of form</p>
 				<input 
-					className='repo-name-input-form' 
+					id='repo-name-input-form' 
 					type='text'
 					onChange={(e) => setForm(e.target.value)}
 					value={form}
+					className={emptyFields.includes('form') ? 'error' : ''}
 				/>
 				<button className='repo-create-button'>create</button>
 				{error && <div className='error'>{error}</div>}
