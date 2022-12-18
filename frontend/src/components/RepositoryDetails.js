@@ -1,7 +1,23 @@
+import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
+
 const RepositoryDetails = ({ repository }) => {
+	const { dispatch } = useRepositoriesContext()
+	
 	const truncate = (str, n) => {
 		return (str.length > n) ? str.substr(0, n - 1) + '...' : str;
 	}
+
+	const handleClick = async () => {
+		const response = await fetch('/api/repositories/' + repository._id, {
+			method:'DELETE'
+		})	
+		const json = await response.json()
+
+		if (response.ok) {
+			dispatch({type: 'DELETE_REPOSITORY',  payload: json})	
+		}
+	}
+
     return (
 			<div className="container px-4 py-5" id="hanging-icons">
 			<h2 className="pb-2 border-bottom"></h2>
@@ -26,6 +42,8 @@ const RepositoryDetails = ({ repository }) => {
 					<div>
 						<p>🟠 {repository.genre}</p>
 						<p>🟣 {repository.form}</p>
+						<p>{repository.createdAt}</p>
+						<button className='delete-repo' onClick={handleClick}>delete</button>
 					</div>
 				</div>
 			</div>

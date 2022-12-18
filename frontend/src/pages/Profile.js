@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
 
 // Imports
 import Nav from "../components/Nav";
 import RepositoryDetails from '../components/RepositoryDetails';
 
 const Profile = () => {
-	
-	const [repositories, setRepositories] = useState(null);
+	const {repositories, dispatch} = useRepositoriesContext()
 
 	useEffect(() => {
 			const fetchRepositories = async () => {
@@ -14,7 +14,7 @@ const Profile = () => {
 					const json = await response.json()
 
 					if (response.ok) {
-							setRepositories(json)
+						dispatch({type: 'SET_REPOSITORIES', payload: json})
 					}
 			}
 			fetchRepositories()

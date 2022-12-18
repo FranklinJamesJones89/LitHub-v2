@@ -233,6 +233,12 @@ form {
  font-size: 1.25em;
 }
 
+.delete-repo {
+  border: none;
+  border-radius: 12px;
+  background-color: orange;
+}
+
 .create-header h1 {
   font-size: 1.25em;
 }

@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
 import Nav from './Nav'
 
 const RepositoryForm = (props) => {
 	// useState hooks destructuring
+	const { dispatch } = useRepositoriesContext()
 	const [title, setTitle] = useState('');
 	const [synopsis, setSynopsis] = useState('');
 	const [genre, setGenre] = useState('');
@@ -36,6 +38,7 @@ const RepositoryForm = (props) => {
 			setForm('')
 			setError(null)
 			console.log('New repository added')
+			dispatch({type: 'CREATE_REPOSITORY', payload: json})
 		}
 	};
 
