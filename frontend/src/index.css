@@ -263,3 +263,45 @@ form {
 .material-symbols-rounded:hover {
   background-color: violet;
 }
+
+/* Features */
+.feature-container {
+  margin-top: 20%;
+  text-align: center;
+  padding: 5%;
+}
+
+.feature-container-header {
+  color: grey;
+}
+
+.feature-container div {
+  margin-top: 5%;
+}
+
+.feature-paragraph {
+  color: grey;
+}
+
+.feature-icon {
+  width: 6vw;
+}
+
+.feature-container h2 {
+  margin-top: 5%;
+}
+
+/* Hero */
+.hero-container {
+  border-radius: 20px;
+  margin-top: 10%;
+}
+
+.hero-btn {
+  background-color: #006dff;
+}
+
+.img-3 {
+  width: 7vw;
+}
+
