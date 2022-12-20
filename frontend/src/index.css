@@ -114,7 +114,7 @@ form {
   background-color: white;
   border: 0;
   padding: 10px 15px;
-  color: purple;
+  color: violet;
   border-radius: 3px;
   width: 250px;
   font-size: 18px;
@@ -225,7 +225,7 @@ form {
   margin-top: 2em;
   border: none;
   border-radius: 12px;
-  background-color: purple;
+  background-color: violet;
   color: white;
 }
 
@@ -261,5 +261,5 @@ form {
 }
 
 .material-symbols-rounded:hover {
-  background-color: orange;
+  background-color: violet;
 }
