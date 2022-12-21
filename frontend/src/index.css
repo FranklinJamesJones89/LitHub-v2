@@ -38,15 +38,17 @@ body {
 
 /* Main */
 .main {
-  margin-top: 15%;
+  margin-top: 18%;
 }
 
 .main p {
   font-size: 1.5em;
+  color: grey;
 }
 
 .main-header {
-  font-size: 3em;
+  font-size: 4.20em;
+  font-weight: bold;
 }
 
 .main-signup {
@@ -183,7 +185,6 @@ form {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
   width: 15em;
-  height: 15vw;
   border-radius: 3px;
   font-family: "Source Sans Pro", sans-serif;
   padding: 3px 15px;
@@ -281,6 +282,7 @@ form {
 
 .feature-paragraph {
   color: grey;
+  font-size: 1.10em;
 }
 
 .feature-icon {
@@ -303,5 +305,23 @@ form {
 
 .img-3 {
   width: 7vw;
+}
+
+hr {
+  width: 80%;
+  height: 8px;
+  margin-left: -50%;
+  background-color:green;
+  border: 0 none;
+  margin-top: 100px;
+  margin-bottom:100px;
+}
+
+.vl {
+  border-left: 6px solid purple;
+  height: 100%;
+  position: absolute;
+  left: 2%;
+  top: 0;
 }
 

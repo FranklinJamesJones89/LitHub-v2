@@ -1,7 +1,7 @@
 function Hero(props) {
 	return (
 		<>
-
+			<div className='vl'></div>
 			<div class="hero-container container col-xxl-8 px-4 py-5">
 				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 					<div class="col-10 col-sm-8 col-lg-6">
@@ -15,6 +15,7 @@ function Hero(props) {
 						</div>
 					</div>
 				</div>
+				<div className='vl'></div>
 				<div class="row flex-lg align-items-center g-5 py-5">
 					<div class="col-10 col-sm-8 col-lg-6">
 						<img className='study' src={props.src2} class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
@@ -34,7 +35,7 @@ function Hero(props) {
 					</div>
 				</div>
 			</div>
-			
+						
 		</>
 	)
 };

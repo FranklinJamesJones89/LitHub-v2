@@ -1,5 +1,7 @@
 function Feature(props) {
     return (
+				<>
+				<div className='vl2'></div>
         <div class="feature-container row">
 	    			<h1 className="feature-container-header">{props.header}</h1>
             <div class="col-lg-4">
@@ -18,6 +20,7 @@ function Feature(props) {
                 <p className="feature-paragraph">Update a document previously shared with today's edits or revisions.</p>
             </div>
         </div>
+				</>
     )
 };
 

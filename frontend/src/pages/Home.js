@@ -6,19 +6,23 @@ import Hero from '../components/Hero';
 const Home = () => {
     return (
         <div className="home">
-            <Nav
-                profile="Profile" 
-                signup ="Sign up"
-                signin="Sign in"
-                about="About"
+            
+						<Nav
+							profile="Profile" 
+							signup ="Sign up"
+							signin="Sign in"
+							about="About"
             />
-            <Main />
+            
+						<Main />
+						
 						<Feature 
 							header='Get started with LitHub'
 							title1='Share'
 							title2='Read'
 							title3='Edit'
 						/>
+						
 						<Hero
 							src='./screenshot2.jpg'
 							src2='./study.jpg'
@@ -28,9 +32,10 @@ const Home = () => {
 							heading3='Alright then, keep your secrets'
 							paragraph='Tired of staring at unread manuscripts? Create a new repository to host, update, maintain, and share your stories.'
 							paragraph2='By proof reading and collaborating on public repositories you and your fellow writers can help each other grow.'
-							paragraph3='Feeling shy? Humble? do you just want to keep the next great American novel under wraps? Keep your brilliant ideas under lock and key by setting your repositories to private.'
+							paragraph3='Feeling shy? Humble? Or do you just want to keep the next great American novel under wraps? Keep your brilliant ideas under lock and key by setting your repositories to private              .'
 						/>						
-        </div>
+        
+			</div>
     )
 };
 
