@@ -47,7 +47,7 @@ body {
 }
 
 .main-header {
-  font-size: 4.20em;
+  font-size: 4.5em;
   font-weight: bold;
 }
 
@@ -61,6 +61,13 @@ body {
   height: 18vw;
   border-radius: 50%;
   margin-left: 35%;
+}
+
+.pinned {
+  margin-left: 10%;
+  margin-bottom: -2%;
+  margin-top: 10%;
+  font-size: 1.25em;
 }
 
 .repo-container {
@@ -94,6 +101,7 @@ form {
   padding: 20px 0;
   position: relative;
 }
+
 .signup-form input {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
@@ -122,11 +130,24 @@ form {
   font-size: 18px;
 }
 
-.pinned {
-  margin-left: 10%;
-  margin-bottom: -2%;
-  margin-top: 10%;
-  font-size: 1.25em;
+.signup-notice {
+  color: white;
+  text-decoration: none;
+}
+
+.signup-notice:hover {
+  color: violet;
+}
+
+.signin-img {
+  width: 5em;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  text-align: center;
+  color: grey;
+  margin-top: -10%;
 }
 
 /* Repository Form */
@@ -272,9 +293,6 @@ form {
   padding: 5%;
 }
 
-.feature-container-header {
-  color: grey;
-}
 
 .feature-container div {
   margin-top: 5%;
@@ -299,12 +317,20 @@ form {
   margin-top: 10%;
 }
 
+.hero-container h1 {
+  font-size: 3.25em;
+}
+
 .hero-btn {
   background-color: #006dff;
 }
 
+.hero-btn:hover {
+  background-color: purple;
+}
+
 .img-3 {
-  width: 7vw;
+  width: 8em;
 }
 
 hr {
@@ -325,3 +351,10 @@ hr {
   top: 0;
 }
 
+.study {
+  border-radius: 12px;
+}
+
+.word-document-img {
+  border-radius: 12px;
+}

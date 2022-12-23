@@ -17,7 +17,7 @@ const Nav = (props) => {
                             <Link to="/signup" className="nav-link nav-home" aria-current="page">{props.signup}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">{props.signin}</Link>
+                            <Link to="/signin" className="nav-link">{props.signin}</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/" className="nav-link">{props.about}</Link>
