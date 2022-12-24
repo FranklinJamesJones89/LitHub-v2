@@ -2,21 +2,19 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const SignupForm = (props) => {
-
-	const [avatar, setAvatar] = useState('');
 	const [username, setUserName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
 	const handleSubmit = async (e) => {
-		e.prevent.default();
+		e.preventDefault();
 		
 		console.log(username, email, password);
 	}
 	
 	return (
 		<div className="signup-container">
-			<img className='signin-img' src={props.src}/>
+			<img className='signin-img' src={props.src} alt="Lithub logo"/>
 			<h1>{props.sign}</h1>
 			<form className="signup-form" onSubmit={handleSubmit}>
 				<input 
@@ -26,7 +24,7 @@ const SignupForm = (props) => {
 					value={username}
 					/>
 				<input 
-					type="text" 
+					type="email" 
 					placeholder="Email"
 					onChange={(e) => setEmail(e.target.value)}
 					value={email}
