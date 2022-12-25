@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import { useSignup } from '../hooks/useSignup';
+import { useSignin } from '../hooks/useSignin';
 import { Link } from 'react-router-dom';
 
-const SignupForm = (props) => {
+const SigninForm = (props) => {
 	const [username, setUserName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const {signup, error, isLoading} = useSignup();
+	const {signin, error, isLoading} = useSignin();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		await signup(username, email, password)
+		await signin(username, email, password)
 		
 	}
 	
@@ -22,7 +22,7 @@ const SignupForm = (props) => {
 			<form className="signup-form" onSubmit={handleSubmit}>
 				<input 
 					type="username" 
-					placeholder="Username"
+					placeholder="username"
 					onChange={(e) => setUserName(e.target.value)}
 					value={username}
 					/>
@@ -41,9 +41,8 @@ const SignupForm = (props) => {
 				<button disabled={isLoading}className="signup-btn"type="submit">{props.button}</button>
 				{error && <div className='test-error'>{error}</div>}
 			</form>
-		  <Link to='/signin' className="signup-notice">{props.formNotice}</Link>
 		</div>
 	)
 };
 
-export default SignupForm;
+export default SigninForm;

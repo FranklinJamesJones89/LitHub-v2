@@ -2,17 +2,28 @@ import Nav from "../components/Nav";
 import Main from "../components/Main";
 import Feature from '../components/Features';
 import Hero from '../components/Hero';
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const Home = () => {
+		const {user} = useAuthContext()
     return (
         <div className="home">
-            
-						<Nav
-							profile="Profile" 
-							signup ="Sign up"
-							signin="Sign in"
-							about="About"
-            />
+						
+						{user && (
+							<Nav
+								profile="Profile" 
+								signout='Sign out'
+								about="About"
+							/>
+						)} 
+						
+						{!user && (
+							<Nav
+								signup ="Sign up"
+								signin="Sign in"
+								about="About"
+							/>
+						)}
             
 						<Main />
 						

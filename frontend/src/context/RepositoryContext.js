@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react';
+import { createContext, useReducer, useEffect } from 'react';
 
 export const RepositoriesContext = createContext();
 
@@ -25,6 +25,9 @@ export const RepositoriesContextProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(repositoriesReducer, {
 		repositories: null
 	});
+
+	useEffect(() => {}, [])
+		const repositories = JSON.parse(localStorage.getItem('repositories'))
  	
 	return (
 		<RepositoriesContext.Provider value={{...state, dispatch}}>

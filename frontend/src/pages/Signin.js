@@ -2,14 +2,14 @@ import { useState } from 'react';
 
 // Components
 import Nav from "../components/Nav";
-import SignupForm from "../components/SignupForm";
+import SigninForm from "../components/SigninForm";
 import Copyright from '../components/Copyright';
 
-function Signup(props) {
+function Signin(props) {
 	return (
 			<>
 				<Nav/>
-				<SignupForm
+				<SigninForm
 					button = 'sign in'
 					src='./parchment.png'
 					sign='Sign in to LitHub'
@@ -19,4 +19,4 @@ function Signup(props) {
 	)
 };
   
-export default Signup;
+export default Signin;

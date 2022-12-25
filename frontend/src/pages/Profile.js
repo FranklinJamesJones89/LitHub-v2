@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 // Imports
 import Nav from "../components/Nav";
@@ -7,7 +8,7 @@ import RepositoryDetails from '../components/RepositoryDetails';
 
 const Profile = () => {
 	const {repositories, dispatch} = useRepositoriesContext()
-
+	const { user } = useAuthContext()
 	useEffect(() => {
 			const fetchRepositories = async () => {
 					const response = await fetch('/api/repositories')
@@ -22,12 +23,19 @@ const Profile = () => {
 
 	return (
 			<div>
+					{user && (
 					<Nav 
 							overview="Overview"
 							repositories="Repositories" 
 							create='Create'
+							signout='Sign out'
 					/>
-					<h1 className='pinned'>Pinned</h1>
+					)}
+				<div className='user-container'>
+				<img src="https://www.thefamouspeople.com/profiles/images/david-foster-wallace-2.jpg" className='user-img'/>
+				<h1 className='user-username'>{user.username}</h1>
+				<span className='user-email'>{user.email}</span>
+				</div>
 					{repositories && repositories.map((repository) => (
 						<RepositoryDetails 
 							key={repository._id}
