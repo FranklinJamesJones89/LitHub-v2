@@ -379,3 +379,9 @@ hr {
   border-radius: 50%;
   border: 2px solid grey;
 }
+
+.quote {
+	font-size: 1em;
+	color: orange;
+	font-weight: bold;
+}
