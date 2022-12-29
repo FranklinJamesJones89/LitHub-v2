@@ -35,9 +35,9 @@ const Profile = () => {
 				)}
 			<div className='user-container'>
 				<img src="https://www.thefamouspeople.com/profiles/images/david-foster-wallace-2.jpg" className='user-img'/>
-				<Quotes />
 				<h1 className='user-username'>{user.username}</h1>
-				<span className='user-email'>{user.email}</span>
+				<p className='user-email'>{user.email}</p>
+				<button className='edit-profile-btn'>Edit profile</button>
 			</div>
 			{repositories && repositories.map((repository) => (
 				<RepositoryDetails 

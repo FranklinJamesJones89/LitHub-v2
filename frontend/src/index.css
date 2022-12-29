@@ -18,12 +18,20 @@ body {
   font-size: 1.5em;
 }
 
+.navbar-brand:hover {
+	color: #834c83;
+}
+
 .nav-home {
   color: white;
 }
 
 .nav-link {
   color: white;
+}
+
+.nav-link:hover {
+	color: #834c8e;
 }
 
 .parchment-img {
@@ -359,13 +367,13 @@ hr {
 /* User Info */
 .user-container h1{
    font-size: 2em; 
-   margin-left: 10%;
+   margin-left: 12%;
    margin-top: 2%;
 }
 
 .user-email {
   display: inline-block;
-  margin-left: 10%;
+  margin-left: 12%;
   font-size: 1.25em;
   color: grey;
 }
@@ -373,15 +381,24 @@ hr {
 
 .user-img {
   margin-top: 5%;
-  margin-left: 11%;
+  margin-left: 13%;
   width: 18em;
   height: 18em;
   border-radius: 50%;
   border: 2px solid grey;
 }
 
-.quote {
+.edit-profile-btn {
+	display: block;
+	margin-left: 12%;
+	border: none;
+	border-radius: 12px;
+	background-color: #834c83;
+	padding: 2px;
+	color: white;
 	font-size: 1em;
-	color: orange;
-	font-weight: bold;
+}
+
+.edit-profile-btn:hover {
+	background-color: purple;	
 }

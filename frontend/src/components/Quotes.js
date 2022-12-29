@@ -17,7 +17,11 @@ const Quotes = () => {
 	}, []);
 
 	return (
-			<span className='quote'>{quote.text}</span>
+		<>
+			<span className='quote-text'>{quote.text}</span>
+			<p className='quote-author'>{quote.author}</p>
+			<button onClick={getQuote}>get quote</button>
+		</>
 	)
 		
 };
