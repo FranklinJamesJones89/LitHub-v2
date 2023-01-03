@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Calculator = () => {
-	const [count, setCount] = useState(4);
+	const [count, setCount] = useState(0);
 
 	const decrementCount = () => {
 		setCount(prevCount => prevCount - 1)
