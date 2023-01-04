@@ -8,8 +8,11 @@ const {
     deleteRepository
 } = require('../controllers/repositoryController');
 
+const requireAuth = require('../middleware/requireAuth');
 const Repository = require('../models/repositoryModel');
 const router = express.Router();
+
+router.use(requireAuth);
 
 // Get all repositories
 router.get('/', getRepositories);

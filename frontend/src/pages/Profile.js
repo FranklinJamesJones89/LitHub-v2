@@ -14,15 +14,25 @@ const Profile = () => {
 	
 	useEffect(() => {
 			const fetchRepositories = async () => {
-					const response = await fetch('/api/repositories')
+				const response = await fetch('/api/repositories', {
+					headers: {
+						'Authorization': `Bearer ${user.token}`
+					}
+				})
 					const json = await response.json()
 
 					if (response.ok) {
 						dispatch({type: 'SET_REPOSITORIES', payload: json})
 					}
 			}
+		if (user) {
 			fetchRepositories()
-	}, [dispatch])
+		}
+	}, [dispatch, user])
+
+	const handleClick = () => {
+		console.log('hello');
+	}
 
 	return (
 		<div>
@@ -38,7 +48,7 @@ const Profile = () => {
 				<img src="https://www.thefamouspeople.com/profiles/images/david-foster-wallace-2.jpg" className='user-img'/>
 				<h1 className='user-username'>{user.username}</h1>
 				<p className='user-email'>{user.email}</p>
-				<button className='edit-profile-btn'>Edit profile</button>
+				<button className='edit-profile-btn' onClick={handleClick}>Edit profile</button>
 			</div>
 			{repositories && repositories.map((repository) => (
 				<RepositoryDetails 

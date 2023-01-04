@@ -1,10 +1,14 @@
+import { Navigate } from 'react-router-dom'
 import { useState } from 'react';
 import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
+import { useAuthContext } from '../hooks/useAuthContext'
 import Nav from './Nav'
 
 const RepositoryForm = (props) => {
 	// useState hooks destructuring
-	const { dispatch } = useRepositoriesContext()
+	const { dispatch } = useRepositoriesContext();
+	const { user } = useAuthContext();	
+
 	const [title, setTitle] = useState('');
 	const [synopsis, setSynopsis] = useState('');
 	const [genre, setGenre] = useState('');
@@ -16,13 +20,19 @@ const RepositoryForm = (props) => {
 	const handleSubmit = async(e) => {
 		e.preventDefault()
 
+		if (!user) {
+			setError('You must be logged in')
+			return
+		}
+
 		const repository = {title, synopsis, genre, form}
 
 		const response = await fetch('/api/repositories', {
 			method: 'POST',
 			body: JSON.stringify(repository),
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${user.token}`
 			}
 		})
 		

@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 
 // get all repositories
 const getRepositories = async (req, res) => {
-    const repositories = await Repository.find({}).sort({createdAt: -1});
+		const user_id = req.user._id;
+
+    const repositories = await Repository.find({ user_id }).sort({createdAt: -1});
 
     res.status(200).json(repositories);
 };
@@ -49,7 +51,8 @@ const createRepository = async (req, res) => {
 
     // add doc to db
     try {
-        const repository = await Repository.create({title, synopsis, genre, form});
+				const user_id = req.user._id
+        const repository = await Repository.create({title, synopsis, genre, form, user_id});
         res.status(200).json(repository);
     } catch (error) {
         res.status(400).json({error: error.message})

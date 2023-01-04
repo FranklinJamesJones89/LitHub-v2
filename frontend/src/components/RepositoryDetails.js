@@ -1,18 +1,27 @@
-import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
+import { useRepositoriesContext } from '../hooks/useRepositoriesContext';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 // Date fns
 import { formatDistanceToNow } from 'date-fns'
 
 const RepositoryDetails = ({ repository }) => {
 	const { dispatch } = useRepositoriesContext()
+	const { user } = useAuthContext();
 	
 	const truncate = (str, n) => {
 		return (str.length > n) ? str.substr(0, n - 1) + '...' : str;
 	}
 
 	const handleClick = async () => {
+		if (!user) {
+			return
+		}
+
 		const response = await fetch('/api/repositories/' + repository._id, {
-			method:'DELETE'
+			method:'DELETE',
+			headers: {
+				'Authorization': `Bearer ${user.token}`
+			}
 		})	
 		const json = await response.json()
 
