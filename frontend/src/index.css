@@ -402,3 +402,23 @@ hr {
 .edit-profile-btn:hover {
 	background-color: purple;	
 }
+
+.user-form-container {
+	margin-left: 12%;
+}
+
+.user-update-save-btn {
+	margin-left: 12%;
+	background-color: #834c83;
+	border: none;
+	border-radius: 10px;
+	color: white;
+}
+
+.user-update-cancel-btn {
+	margin-left: 1%;
+	background-color: orange;
+	border: none;
+	border-radius: 10px;
+	color: white;
+}
