@@ -367,13 +367,13 @@ hr {
 /* User Info */
 .user-container h1{
    font-size: 2em; 
-   margin-left: 12%;
+   margin-left: 18%;
    margin-top: 2%;
 }
 
 .user-email {
   display: inline-block;
-  margin-left: 12%;
+  margin-left: 18%;
   font-size: 1.25em;
   color: grey;
 }
@@ -381,7 +381,7 @@ hr {
 
 .user-img {
   margin-top: 5%;
-  margin-left: 10%;
+  margin-left: 15%;
   width: 18em;
   height: 18em;
   border-radius: 50%;
@@ -390,7 +390,7 @@ hr {
 
 .edit-profile-btn {
 	display: block;
-	margin-left: 12%;
+	margin-left: 18%;
 	border: none;
 	border-radius: 12px;
 	background-color: #834c83;
@@ -421,4 +421,8 @@ hr {
 	border: none;
 	border-radius: 10px;
 	color: white;
+}
+
+#hanging-icons {
+	margin-right: 3%;
 }

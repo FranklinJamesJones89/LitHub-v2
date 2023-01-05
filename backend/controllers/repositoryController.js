@@ -1,5 +1,5 @@
-const Repository = require('../models/repositoryModel');
-const mongoose = require('mongoose');
+const Repository = require('../models/repositoryModel')
+const mongoose = require('mongoose')
 
 // get all repositories
 const getRepositories = async (req, res) => {
