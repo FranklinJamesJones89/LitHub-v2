@@ -11,6 +11,4 @@ router.post('/signin', signInUser)
 // Sign up route
 router.post('/signup', signUpUser)
 
-// Upload route
-
 module.exports = router;
