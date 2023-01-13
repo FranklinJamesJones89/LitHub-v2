@@ -2,7 +2,6 @@ import Nav from "../components/Nav";
 import Main from "../components/Main";
 import Feature from '../components/Features';
 import Hero from '../components/Hero';
-import FileUploadForm from '../components/UpdateUser';
 import { useAuthContext } from '../hooks/useAuthContext'
 
 const Home = () => {
@@ -48,7 +47,6 @@ const Home = () => {
 							paragraph3='Feeling shy? Humble? Or do you just want to keep the next great American novel under wraps? Keep your brilliant ideas under lock and key by setting your repositories to private              .'
 						/>						
 			</div>
-			<FileUploadForm />
 		</>
     )
 };

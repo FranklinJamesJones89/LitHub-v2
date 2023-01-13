@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useRepositoriesContext } from '../hooks/useRepositoriesContext';
 import { useAuthContext } from '../hooks/useAuthContext';
-import { Link } from 'react-router-dom';
 
 // Imports
 import Nav from "../components/Nav"
 import RepositoryDetails from '../components/RepositoryDetails'
-import Quotes from '../components/Quotes'
 
 const Profile = () => {
 	const {repositories, dispatch} = useRepositoriesContext()
@@ -31,10 +29,6 @@ const Profile = () => {
 		}
 	}, [dispatch, user])
 
-	const handleClick = () => {
-		console.log('hello');
-	}
-
 	return (
 		<div>
 			{user && (
@@ -47,7 +41,7 @@ const Profile = () => {
 			)}
 			
 			<div className='user-container'>
-				<img src="https://www.thefamouspeople.com/profiles/images/david-foster-wallace-2.jpg" className='user-img'/>
+				<img src="https://www.thefamouspeople.com/profiles/images/david-foster-wallace-2.jpg" className='user-img'  alt='Avatar'/>
 				<h1 className='user-username'>{user.username}</h1>
 				<p className='user-email'>{user.email}</p>
 				<button style={{ display: !isVisible ? 'block' : 'none' }}className='edit-profile-btn' onClick={() => setIsVisible(!isVisible)}>Edit profile</button>

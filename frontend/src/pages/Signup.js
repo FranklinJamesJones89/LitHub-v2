@@ -1,7 +1,6 @@
 import Nav from "../components/Nav";
 import SignupForm from "../components/SignupForm";
 import Copyright from '../components/Copyright';
-import { useState } from 'react';
 
 function Signup(props) {
 	return (

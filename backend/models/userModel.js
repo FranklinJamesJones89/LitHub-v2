@@ -5,10 +5,6 @@ const validator = require('validator');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-	avatar: {
-		data: Buffer,
-		contentType: String
-	},
 	username: {
 		type: String,
 		required: true

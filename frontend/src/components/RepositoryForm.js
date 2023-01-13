@@ -1,4 +1,3 @@
-import { Navigate } from 'react-router-dom'
 import { useState } from 'react';
 import { useRepositoriesContext } from '../hooks/useRepositoriesContext'
 import { useAuthContext } from '../hooks/useAuthContext'

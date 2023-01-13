@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useSignin } from '../hooks/useSignin';
-import { Link } from 'react-router-dom';
 
 const SigninForm = (props) => {
 	const [username, setUserName] = useState('');
